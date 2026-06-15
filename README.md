@@ -1,4 +1,4 @@
-# 🌊 Sistem Monitoring Sampah Laut
+# Sistem Monitoring Sampah Laut
 **Project Based Learning (PjBL) - Progres 1: Analisis Kebutuhan Sistem**  
 **Mata Kuliah:** Sistem Basis Data  
 **Dosen Pengampu:** Ferdi Chahyadi  
@@ -8,7 +8,7 @@
 
 ---
 
-## 👥 Anggota Kelompok 8
+## Anggota Kelompok 8
 | No | Nama | NIM |
 |:--:|:---|:---|
 | 1 | Andre Zulyan Pratama | 2501020115 |
@@ -18,7 +18,7 @@
 
 ---
 
-## 📑 Daftar Isi
+## Daftar Isi
 1. [Deskripsi Studi Kasus](#1-deskripsi-studi-kasus)
 2. [Latar Belakang dan Tujuan Sistem](#2-latar-belakang-dan-tujuan-sistem)
 3. [Identifikasi Aktor](#3-identifikasi-aktor)
@@ -40,7 +40,7 @@ Pencatatan manual menggunakan kertas atau spreadsheet sederhana menyebabkan data
 
 ## 2. Latar Belakang dan Tujuan Sistem
 
-### 📌 Latar Belakang
+### a. Latar Belakang
 Permasalahan utama yang dihadapi dalam pengelolaan data sampah laut saat ini antara lain:
 1. Pencatatan data masih dilakukan secara manual sehingga rawan kesalahan dan duplikasi.
 2. Tidak ada sistem terpusat yang mengintegrasikan data dari berbagai lokasi pemantauan.
@@ -48,7 +48,7 @@ Permasalahan utama yang dihadapi dalam pengelolaan data sampah laut saat ini ant
 4. Koordinasi antara petugas lapangan, peneliti, dan pembuat kebijakan belum optimal.
 5. Data historis sulit ditelusuri dan dianalisis untuk keperluan pengambilan keputusan.
 
-### 🎯 Tujuan Sistem
+### b. Tujuan Sistem
 1. Merancang basis data terpusat yang mampu menyimpan seluruh data pemantauan sampah laut secara terstruktur.
 2. Mengimplementasikan sistem yang memudahkan pencatatan data dari berbagai titik lokasi pemantauan.
 3. Menghasilkan query SQL untuk keperluan laporan dan analisis persebaran sampah laut.
@@ -89,19 +89,19 @@ Permasalahan utama yang dihadapi dalam pengelolaan data sampah laut saat ini ant
 ## 5. Kebutuhan Data
 *(Catatan: Data bersifat sementara dan dapat berubah seiring perkembangan proyek)*
 
-### 🗄️ Data Master
+### a. Data Master
 - **Data Lokasi Pemantauan**: ID lokasi, nama lokasi, koordinat GPS (latitude/longitude), jenis perairan, provinsi/kabupaten, deskripsi.
 - **Data Jenis Sampah**: ID jenis sampah, nama jenis, kategori, tingkat bahaya, deskripsi.
 - **Data Petugas**: ID petugas, nama, nomor identitas, jabatan, unit kerja, kontak, wilayah tugas.
 - **Data Sumber Sampah**: ID sumber, jenis sumber, deskripsi.
 - **Data Alat Pemantauan**: ID alat, nama alat, jenis, kondisi, tanggal kalibrasi terakhir.
 
-### 🔄 Data Transaksi
+### b. Data Transaksi
 - **Data Pemantauan**: ID pemantauan, tanggal/waktu, ID lokasi, ID petugas, kondisi cuaca, kondisi arus, catatan umum.
 - **Data Hasil Pemantauan Sampah**: ID hasil, ID pemantauan, ID jenis sampah, ID sumber, volume (m3), berat (kg), jumlah item, foto (path).
 - **Data Pembersihan**: ID pembersihan, ID pemantauan, tanggal pelaksanaan, jumlah petugas, volume terangkut, tujuan pembuangan, catatan.
 
-### 📊 Data Laporan
+### c. Data Laporan
 1. Laporan Rekapitulasi Sampah per Lokasi per Periode
 2. Laporan Perbandingan Jenis Sampah Dominan
 3. Laporan Tren Volume Sampah Berdasarkan Musim
