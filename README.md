@@ -9,6 +9,7 @@ Mata Kuliah: Sistem Basis Data
 
 Dosen: Ferdi Chahyadi M.Kom
 
+
 Disusun oleh:
 Kelompok 8
 
@@ -19,8 +20,11 @@ Kelompok 8
 | Rizky Akbar Hidayatullah | 2501020113 |
 | M. Riquelma Zidan | 2501020110 |
 
+
 Program Studi: Sistem Basis Data
+
 Tahun 2025/2026
+
 Deadline Progres 1: 15 Juni 2026
 
 ## 1. DESKRIPSI STUDI KASUS
