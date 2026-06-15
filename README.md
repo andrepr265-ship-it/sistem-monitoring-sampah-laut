@@ -7,7 +7,7 @@ SISTEM MONITORING SAMPAH LAUT
 
 Mata Kuliah: Sistem Basis Data
 
-Dosen: Ferdi Chahyadi
+Dosen: Ferdi Chahyadi M.Kom
 
 Disusun oleh:
 Kelompok 8
