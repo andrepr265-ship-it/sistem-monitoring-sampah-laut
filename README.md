@@ -167,6 +167,6 @@ Note: Pembagian tugas anggota ini bersifat sementara dan bisa berubah
 | Keterangan | Detail |
 | --- | --- |
 | Link Repository | https://github.com/andrepr265-ship-it/sistem-monitoring-sampah-laut |
-| Nama Repository | sistem -monitoring-sampah -laut |
+| Nama Repository | sistem-monitoring-sampah-laut |
 | Visibility | Public |
 | Branch Utama | main |
