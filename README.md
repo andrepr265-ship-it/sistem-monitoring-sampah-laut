@@ -6,6 +6,7 @@ SISTEM MONITORING SAMPAH LAUT
 
 
 Mata Kuliah: Sistem Basis Data
+
 Dosen: Ferdi Chahyadi
 
 Disusun oleh:
@@ -20,7 +21,7 @@ Kelompok 8
 
 Program Studi: Sistem Basis Data
 Tahun 2025/2026
-Deadline Progres 1: 1 5 Juni 2026
+Deadline Progres 1: 15 Juni 2026
 
 ## 1. DESKRIPSI STUDI KASUS
 Sampah laut merupakan salah satu permasalahan lingkungan yang serius di wilayah pesisir dan kepulauan Indonesia, termasuk di Kota Batam yang berbatasan langsung dengan jalur pelayaran internasional. Tumpukan sampah plastik, limbah rumah tangga, dan sampah dari aktivitas pelayaran sering ditemukan terdampar di pantai maupun mengapung di perairan, namun pencatatan dan pemantauan kondisi sampah laut tersebut selama ini masih dilakukan secara manual dan tidak terstruktur.
