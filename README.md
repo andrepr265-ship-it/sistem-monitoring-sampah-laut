@@ -155,10 +155,10 @@ Secara keseluruhan, diagram ini bersifat sementara ( dapat berubah seiring berja
 
 | Anggota (NIM) | Progres (1-4) | Tugas dan Tanggung Jawab |
 | --- | --- | --- |
-| Andre Zulyan Pratama (2501020115) | Progres 1 Progres 2 Progres 3 Progres 4 | Mengidentifikasi aktor sistem dan menyusun kebutuhan fungsional Merancang ERD dan menyusun penjelasan entitas-relasi Membuat script SQL DDL (CREATE DATABASE, CREATE TABLE) dan constraint Menyusun laporan akhir |
-| Putra Ali Syahbana (2501020088) | Progres 1 Progres 2 Progres 3 Progres 4 | Menentukan kebutuhan data dan menyusun diagram proses ( use case ) Menyusun kamus data (data dictionary) Membuat data uji (INSERT) untuk seluruh tabel Menyusun laporan akhir |
-| Rizky Akbar Hidayatulah (2501020113) | Progres 1 Progres 2 Progres 3 Progres 4 | Menyusun deskripsi studi kasus, latar belakang, dan tujuan sistem Melakukan normalisasi data (UNF - 1NF - 2NF - 3NF) Membuat minimal 10 query SQL operasional dan laporan Menyusun laporan akhir |
-| M. Riquelma Zidan (2501020110) | Progres 1 Progres 2 Progres 3 Progres 4 | Mengelola repository GitHub dan menyusun dokumen progres Mereview dan merevisi hasil analisis kebutuhan ( jika ada perubahan ) Menyusun skenario pengujian dan dokumentasi screenshot hasil implementasi Menyusun laporan akhir , lampiran , dan slide presentasi |
+| Andre Zulyan Pratama (2501020115) | Progres 1 Progres 2 Progres 3 Progres 4 | Mengidentifikasi aktor sistem dan menyusun kebutuhan fungsional. Merancang ERD dan menyusun penjelasan entitas-relasi. Membuat script SQL DDL (CREATE DATABASE, CREATE TABLE) dan constraint. Menyusun laporan akhir. |
+| Putra Ali Syahbana (2501020088) | Progres 1 Progres 2 Progres 3 Progres 4 | Menentukan kebutuhan data dan menyusun diagram proses ( use case ). Menyusun kamus data (data dictionary). Membuat data uji (INSERT) untuk seluruh tabel. Menyusun laporan akhir. |
+| Rizky Akbar Hidayatulah (2501020113) | Progres 1 Progres 2 Progres 3 Progres 4 | Menyusun deskripsi studi kasus, latar belakang, dan tujuan sistem. Melakukan normalisasi data (UNF - 1NF - 2NF - 3NF). Membuat minimal 10 query SQL operasional dan laporan. Menyusun laporan akhir. |
+| M. Riquelma Zidan (2501020110) | Progres 1 Progres 2 Progres 3 Progres 4 | Mengelola repository GitHub dan menyusun dokumen progres. Mereview dan merevisi hasil analisis kebutuhan ( jika ada perubahan ). Menyusun skenario pengujian dan dokumentasi screenshot hasil implementasi. Menyusun laporan akhir , lampiran , dan slide presentasi. |
 
 Note: Pembagian tugas anggota ini bersifat sementara dan bisa berubah
 
