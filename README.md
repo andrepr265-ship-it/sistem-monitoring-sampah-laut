@@ -2,6 +2,9 @@
 PROGRES 1 – ANALISIS KEBUTUHAN SISTEM
 SISTEM MONITORING SAMPAH LAUT
 
+<img width="472" height="472" alt="image" src="https://github.com/user-attachments/assets/7bbc037f-23ac-4a5e-a1d3-d99fd06a4189" />
+
+
 Mata Kuliah: Sistem Basis Data
 Dosen: Ferdi Chahyadi
 
@@ -10,7 +13,7 @@ Kelompok 8
 
 | Nama | NIM |
 | --- | --- |
-| Andre Zulyan Pratama | 2501020 115 |
+| Andre Zulyan Pratama | 2501020115 |
 | Putra Ali Syahbana | 2501020088 |
 | Rizky Akbar Hidayatullah | 2501020113 |
 | M. Riquelma Zidan | 2501020110 |
@@ -95,7 +98,8 @@ Berikut adalah data-data yang perlu dikelola dalam sistem ( datanya bersifat sem
 4. Laporan Kinerja Kegiatan Pembersihan
 
 ## 1. D IAGRAM PROSES
-![Gambar 1 Diagram Use Case Sistem Monitoring Sampah Laut](diagram-usecase.png)
+<img width="848" height="954" alt="image" src="https://github.com/user-attachments/assets/0b7889aa-ddd8-4244-98bd-c7fd331d5440" />
+
 
 Gambar 1 Diagram Use Case Sistem Monitoring Sampah Laut, menggambarkan interaksi aktor (Administrator, Petugas Lapangan, Koordinator /Supervisor, Peneliti /Analis, dan Pemerintah /Lembaga) dengan 13 use case yang merepresentasikan kebutuhan fungsional KF-01 s.d. K . ( Note: data bersifat sementara dan bisa berubah )
 
