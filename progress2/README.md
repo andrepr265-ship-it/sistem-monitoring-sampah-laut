@@ -1,5 +1,7 @@
 PROJECT BASED LEARNING (PjBL)
+
 PROGRES 2 – PERANCANGAN BASIS DATA
+
 SISTEM MONITORING SAMPAH LAUT
 
 <img width="472" height="472" alt="image" src="https://github.com/user-attachments/assets/6cb50b96-5ab9-48fd-91c1-86f66fb7ad14" />
@@ -18,8 +20,10 @@ Kelompok 8
 | M. Riquelma Zidan | 2501020110 |
 
 Program Studi: Sistem Basis Data
+
 Tahun 2025/2026
-Deadline Progres 2: 21 Juni 2026
+
+Deadline Progres 2: 22 Juni 2026
 
 ## 1. ERD (ENTITY RELATIONSHIP DIAGRAM) LENGKAP
 <img width="1971" height="1241" alt="Diagram ERD_Progress2_Kelompok 8" src="https://github.com/user-attachments/assets/2475f50b-3e94-4825-af3f-563534e0b91e" />
@@ -175,7 +179,7 @@ Proses normalisasi dilakukan terhadap data pencatatan hasil pemantauan sampah la
 Pada bentuk tidak normal, satu sesi pemantauan dapat memuat lebih dari satu temuan jenis sampah dalam satu baris data yang sama (kelompok data berulang), sehingga atribut nama_jenis_sampah, kategori, volume_m3, berat_kg, dan nama_sumber bersifat multivalue/berulang untuk satu id_pemantauan. Bentuk UNF dapat dituliskan sebagai:
 LAPORAN_PEMANTAUAN = {id_pemantauan, tanggal_waktu, nama_lokasi, latitude, longitude, jenis_perairan, kondisi_cuaca, kondisi_arus, catatan_umum, {nama_petugas, no_identitas, jabatan, peran_dalam_pemantauan}, {nama_jenis_sampah, kategori, tingkat_bahaya, volume_m3, berat_kg, jumlah_item, nama_sumber}, {nama_alat, jenis_alat}, {tanggal_pelaksanaan_bersih, volume_terangkut, tujuan_pembuangan, nama_petugas_bersih}}
 Tanda kurung kurawal { } pada bagian akhir menunjukkan kelompok atribut yang dapat berulang (repeating group) untuk satu id_pemantauan yang sama. Contoh ilustrasi data (disederhanakan, hanya menampilkan kelompok data sampah) ditampilkan pada tabel berikut, di mana sel yang menyatu (merge) menunjukkan nilai yang sama/berulang untuk satu sesi pemantauan:
-Tabel 11. Ilustrasi Data Bentuk Tidak Normal (UNF)
+Tabel 1. Ilustrasi Data Bentuk Tidak Normal (UNF)
 | id_ pemantauan | tanggal_waktu / lokasi | petugas | nama_jenis _sampah | kategori | volume _m3 | berat _kg | nama _sumber |
 |---|---|---|---|---|---|---|---|
 | P001 | 14/06/2026 - Pantai Nongsa | Andre Z. Pratama | Plastik | Anorganik | 15.0 | 22.5 | Domestik |
@@ -184,7 +188,7 @@ Tabel 11. Ilustrasi Data Bentuk Tidak Normal (UNF)
 
 ### b. Bentuk Normal Pertama (1NF)
 Untuk mencapai 1NF, kelompok data berulang (repeating group) pada UNF dipecah sehingga setiap baris hanya memuat satu nilai atomik (tidak ada lagi multivalue/sel bermerge). Setiap kombinasi pemantauan dan jenis sampah dituliskan dalam barisnya sendiri, seperti pada tabel berikut:
-Tabel 12. Hasil Transformasi ke Bentuk Normal Pertama (1NF)
+Tabel 2. Hasil Transformasi ke Bentuk Normal Pertama (1NF)
 | id_pemantauan | tanggal_waktu / lokasi | petugas | nama_ jenis_ sampah | kategori | volume_ m3 | berat_ kg | nama_ sumber |
 |---|---|---|---|---|---|---|---|
 | P001 | 14/06/2026 - Pantai Nongsa | Andre Z. Pratama | Plastik | Anorganik | 15.0 | 22.5 | Domestik |
