@@ -1,11 +1,8 @@
 PROJECT BASED LEARNING (PjBL)
-
 PROGRES 2 – PERANCANGAN BASIS DATA
-
 SISTEM MONITORING SAMPAH LAUT
 
 <img width="472" height="472" alt="image" src="https://github.com/user-attachments/assets/6cb50b96-5ab9-48fd-91c1-86f66fb7ad14" />
-
 
 Mata Kuliah: Sistem Basis Data
 Dosen: Ferdi Chahyadi M.Kom
@@ -20,9 +17,7 @@ Kelompok 8
 | M. Riquelma Zidan | 2501020110 |
 
 Program Studi: Sistem Basis Data
-
 Tahun 2025/2026
-
 Deadline Progres 2: 22 Juni 2026
 
 ## 1. ERD (ENTITY RELATIONSHIP DIAGRAM) LENGKAP
@@ -181,6 +176,7 @@ LAPORAN_PEMANTAUAN = {id_pemantauan, tanggal_waktu, nama_lokasi, latitude, longi
 Tanda kurung kurawal { } pada bagian akhir menunjukkan kelompok atribut yang dapat berulang (repeating group) untuk satu id_pemantauan yang sama. Contoh ilustrasi data (disederhanakan, hanya menampilkan kelompok data sampah) ditampilkan pada tabel berikut, di mana sel yang menyatu (merge) menunjukkan nilai yang sama/berulang untuk satu sesi pemantauan:
 
 Tabel 1. Ilustrasi Data Bentuk Tidak Normal (UNF)
+
 | id_ pemantauan | tanggal_waktu / lokasi | petugas | nama_jenis _sampah | kategori | volume _m3 | berat _kg | nama _sumber |
 |---|---|---|---|---|---|---|---|
 | P001 | 14/06/2026 - Pantai Nongsa | Andre Z. Pratama | Plastik | Anorganik | 15.0 | 22.5 | Domestik |
@@ -191,6 +187,7 @@ Tabel 1. Ilustrasi Data Bentuk Tidak Normal (UNF)
 Untuk mencapai 1NF, kelompok data berulang (repeating group) pada UNF dipecah sehingga setiap baris hanya memuat satu nilai atomik (tidak ada lagi multivalue/sel bermerge). Setiap kombinasi pemantauan dan jenis sampah dituliskan dalam barisnya sendiri, seperti pada tabel berikut:
 
 Tabel 2. Hasil Transformasi ke Bentuk Normal Pertama (1NF)
+
 | id_pemantauan | tanggal_waktu / lokasi | petugas | nama_ jenis_ sampah | kategori | volume_ m3 | berat_ kg | nama_ sumber |
 |---|---|---|---|---|---|---|---|
 | P001 | 14/06/2026 - Pantai Nongsa | Andre Z. Pratama | Plastik | Anorganik | 15.0 | 22.5 | Domestik |
@@ -209,18 +206,20 @@ Pada 1NF, kunci kandidat bersifat komposit (gabungan id_pemantauan dan jenis sam
 Setelah pemisahan tersebut, tabel transaksi yang tersisa hanya menyimpan atribut yang bergantung penuh pada kunci utamanya masing-masing, yaitu pemantauan (id_pemantauan, tanggal_waktu, id_lokasi, kondisi_cuaca, kondisi_arus, catatan_umum) dan hasil_pemantauan (id_hasil, id_pemantauan, id_jenis, id_sumber, volume_m3, berat_kg, jumlah_item, foto_path). 
 Karena satu sesi pemantauan melibatkan beberapa petugas sekaligus (tim), relasi petugas-pemantauan bersifat N:M sehingga direpresentasikan melalui tabel penghubung pemantauan_petugas (id_pemantauan, id_petugas, peran_dalam_pemantauan) — atribut id_petugas tidak lagi menjadi FK langsung di tabel pemantauan. Dengan demikian seluruh atribut non-kunci pada setiap tabel telah bergantung penuh pada primary key tabel tersebut (functional dependency penuh), sehingga struktur ini telah memenuhi 2NF. Ilustrasi hasil dekomposisi ke 2NF ditampilkan pada tabel-tabel berikut:
 
+Tabel 3. Hasil Dekomposisi 2NF — Tabel pemantauan
+
 | id_pemantauan | tanggal_waktu | id_lokasi (FK) | kondisi_cuaca | kondisi_arus | catatan_umum |
 | --- | --- | --- | --- | --- | --- |
 | P001 | 14/06/2026 08:00 | L001 | Cerah | Tenang | - |
 | P002 | 15/06/2026 09:30 | L002 | Berawan | Sedang | Area padat |
-Tabel 3. Hasil Dekomposisi 2NF — Tabel pemantauan
+
+Tabel 4. Hasil Dekomposisi 2NF — Tabel hasil_pemantauan (atribut non-kunci bergantung penuh pada id_hasil)
 
 | id_hasil | id_pemantauan (FK) | id_jenis (FK) | id_sumber (FK) | volume_m3 | berat_kg |
 | --- | --- | --- | --- | --- | --- |
 | H001 | P001 | J001 | S001 | 15.0 | 22.5 |
 | H002 | P001 | J002 | S003 | 8.0 | 10.0 |
 | H003 | P002 | J003 | S002 | 3.0 | 9.0 |
-Tabel 4. Hasil Dekomposisi 2NF — Tabel hasil_pemantauan (atribut non-kunci bergantung penuh pada id_hasil)
 
 Keterangan: Pada tabel pemantauan, seluruh atribut (tanggal_waktu, id_lokasi, kondisi_cuaca, kondisi_arus, catatan_umum) bergantung penuh pada id_pemantauan. Pada tabel hasil_pemantauan, seluruh atribut bergantung penuh pada id_hasil. Referensi ke entitas lain menggunakan FK sehingga tidak ada lagi redundansi data nama lokasi, nama jenis sampah, atau nama sumber yang berulang di setiap baris.
 
@@ -231,6 +230,8 @@ Tahap akhir 3NF memeriksa apakah masih terdapat dependensi transitif, yaitu atri
 - Pada tabel lokasi, atribut provinsi dan kabupaten disimpan sebagai atribut langsung dari id_lokasi (bukan diturunkan dari atribut lain) sehingga tidak menimbulkan dependensi transitif.
 - Pada tabel petugas, atribut unit_kerja dan wilayah_tugas masing-masing bergantung langsung pada id_petugas dan tidak diturunkan dari atribut non-kunci lainnya.
 Karena tidak ditemukan dependensi transitif pada seluruh tabel, maka struktur data telah memenuhi Bentuk Normal Ketiga (3NF). Untuk mengakomodasi relasi many-to-many yang teridentifikasi selama proses analisis (pemantauan dengan alat_pemantauan, pembersihan dengan petugas, serta pemantauan dengan petugas), ditambahkan tiga tabel penghubung, yaitu pemantauan_alat, pembersihan_petugas, dan pemantauan_petugas. Hasil akhir normalisasi ini menghasilkan 11 (sebelas) tabel sebagaimana digambarkan pada ERD di Bagian 1 dan dirinci pada Kamus Data di Bagian 3. Ringkasan pemeriksaan dependensi transitif pada seluruh tabel ditampilkan berikut ini:
+
+Tabel 5. Ringkasan Pemeriksaan Dependensi Transitif pada Seluruh Tabel (3NF)
 
 | Tabel | Primary Key | Dependensi Transitif? | Status 3NF |
 | --- | --- | --- | --- |
@@ -243,7 +244,7 @@ Karena tidak ditemukan dependensi transitif pada seluruh tabel, maka struktur da
 | hasil_pemantauan | id_hasil | Tidak. volume_m3, berat_kg, jumlah_item, foto_path bergantung langsung pada id_hasil. FK hanya sebagai referensi, bukan atribut non-kunci derivatif. | ✓ Memenuhi 3NF |
 | pembersihan | id_pembersihan | Tidak. tanggal_pelaksanaan, volume_terangkut, tujuan_pembuangan, catatan semuanya bergantung langsung pada id_pembersihan. | ✓ Memenuhi 3NF |
 | Tabel Junction (3 tabel) | PK Komposit | Tidak. Setiap atribut tambahan (kondisi_pakai, peran_petugas, peran_dalam_pemantauan) bergantung langsung pada PK komposit masing-masing tabel. | ✓ Memenuhi 3NF |
-Tabel 5. Ringkasan Pemeriksaan Dependensi Transitif pada Seluruh Tabel (3NF)
+
 
 ## 5. REVISI ANALISIS KEBUTUHAN (JIKA ADA)
 Selama proses perancangan ERD, normalisasi, dan penyusunan kamus data pada Progres 2, ditemukan beberapa hal pada hasil analisis kebutuhan Progres 1 yang perlu disempurnakan agar struktur basis data lebih akurat, konsisten, dan bebas dari redundansi maupun anomali data. Ringkasan revisi adalah sebagai berikut:
