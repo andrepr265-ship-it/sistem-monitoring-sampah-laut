@@ -2,6 +2,9 @@ PROJECT BASED LEARNING (PjBL)
 PROGRES 2 – PERANCANGAN BASIS DATA
 SISTEM MONITORING SAMPAH LAUT
 
+<img width="472" height="472" alt="image" src="https://github.com/user-attachments/assets/6cb50b96-5ab9-48fd-91c1-86f66fb7ad14" />
+
+
 Mata Kuliah: Sistem Basis Data
 Dosen: Ferdi Chahyadi M.Kom
 Disusun oleh:
@@ -19,7 +22,7 @@ Tahun 2025/2026
 Deadline Progres 2: 21 Juni 2026
 
 ## 1. ERD (ENTITY RELATIONSHIP DIAGRAM) LENGKAP
-<img width="900" height="771" alt="image" src="https://github.com/user-attachments/assets/9470bab3-2799-4a04-8143-4bad0194d505" />
+<img width="1971" height="1241" alt="Diagram ERD_Progress2_Kelompok 8" src="https://github.com/user-attachments/assets/2475f50b-3e94-4825-af3f-563534e0b91e" />
 
 ## 2. PENJELASAN ENTITAS DAN RELASI
 ### a. Penjelasan Entitas
