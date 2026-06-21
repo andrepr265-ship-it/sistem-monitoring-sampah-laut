@@ -19,6 +19,8 @@ Tahun 2025/2026
 Deadline Progres 2: 21 Juni 2026
 
 ## 1. ERD (ENTITY RELATIONSHIP DIAGRAM) LENGKAP
+<img width="900" height="771" alt="image" src="https://github.com/user-attachments/assets/9470bab3-2799-4a04-8143-4bad0194d505" />
+
 ## 2. PENJELASAN ENTITAS DAN RELASI
 ### a. Penjelasan Entitas
 Berdasarkan hasil perancangan ERD, terdapat 11 (sebelas) entitas yang digunakan dalam Sistem Monitoring Sampah Laut, terdiri dari 5 entitas master, 3 entitas transaksi, dan 3 tabel penghubung (junction table) untuk merepresentasikan relasi many-to-many. Rincian entitas adalah sebagai berikut:
