@@ -185,6 +185,7 @@ Tabel 12. Hasil Transformasi ke Bentuk Normal Pertama (1NF)
 | P001 | 14/06/2026 - Pantai Nongsa | Andre Z. Pratama | Plastik | Anorganik | 15.0 | 22.5 | Domestik |
 | P001 | 14/06/2026 - Pantai Nongsa | Andre Z. Pratama | Organik | Organik | 8.0 | 10.0 | Pariwisata |
 | P002 | 15/06/2026 - Pantai Trikora | Rizky A. Hidayatullah | Kaca | Anorganik | 3.0 | 9.0 | Kapal |
+
 Tabel pada 1NF di atas sudah tidak memiliki kelompok data berulang, namun masih terjadi redundansi data: atribut tanggal_waktu, nama_lokasi, dan data petugas berulang pada setiap baris untuk id_pemantauan yang sama. Hal ini menunjukkan adanya dependensi parsial (partial dependency) terhadap kunci kandidat komposit, sehingga perlu dilanjutkan ke 2NF.
 
 ### c. Bentuk Normal Kedua (2NF)
