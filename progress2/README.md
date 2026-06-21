@@ -179,6 +179,7 @@ Proses normalisasi dilakukan terhadap data pencatatan hasil pemantauan sampah la
 Pada bentuk tidak normal, satu sesi pemantauan dapat memuat lebih dari satu temuan jenis sampah dalam satu baris data yang sama (kelompok data berulang), sehingga atribut nama_jenis_sampah, kategori, volume_m3, berat_kg, dan nama_sumber bersifat multivalue/berulang untuk satu id_pemantauan. Bentuk UNF dapat dituliskan sebagai:
 LAPORAN_PEMANTAUAN = {id_pemantauan, tanggal_waktu, nama_lokasi, latitude, longitude, jenis_perairan, kondisi_cuaca, kondisi_arus, catatan_umum, {nama_petugas, no_identitas, jabatan, peran_dalam_pemantauan}, {nama_jenis_sampah, kategori, tingkat_bahaya, volume_m3, berat_kg, jumlah_item, nama_sumber}, {nama_alat, jenis_alat}, {tanggal_pelaksanaan_bersih, volume_terangkut, tujuan_pembuangan, nama_petugas_bersih}}
 Tanda kurung kurawal { } pada bagian akhir menunjukkan kelompok atribut yang dapat berulang (repeating group) untuk satu id_pemantauan yang sama. Contoh ilustrasi data (disederhanakan, hanya menampilkan kelompok data sampah) ditampilkan pada tabel berikut, di mana sel yang menyatu (merge) menunjukkan nilai yang sama/berulang untuk satu sesi pemantauan:
+
 Tabel 1. Ilustrasi Data Bentuk Tidak Normal (UNF)
 | id_ pemantauan | tanggal_waktu / lokasi | petugas | nama_jenis _sampah | kategori | volume _m3 | berat _kg | nama _sumber |
 |---|---|---|---|---|---|---|---|
@@ -188,6 +189,7 @@ Tabel 1. Ilustrasi Data Bentuk Tidak Normal (UNF)
 
 ### b. Bentuk Normal Pertama (1NF)
 Untuk mencapai 1NF, kelompok data berulang (repeating group) pada UNF dipecah sehingga setiap baris hanya memuat satu nilai atomik (tidak ada lagi multivalue/sel bermerge). Setiap kombinasi pemantauan dan jenis sampah dituliskan dalam barisnya sendiri, seperti pada tabel berikut:
+
 Tabel 2. Hasil Transformasi ke Bentuk Normal Pertama (1NF)
 | id_pemantauan | tanggal_waktu / lokasi | petugas | nama_ jenis_ sampah | kategori | volume_ m3 | berat_ kg | nama_ sumber |
 |---|---|---|---|---|---|---|---|
@@ -204,14 +206,44 @@ Pada 1NF, kunci kandidat bersifat komposit (gabungan id_pemantauan dan jenis sam
 - jenis_sampah (id_jenis, nama_jenis, kategori, tingkat_bahaya, deskripsi) — dipisahkan karena hanya bergantung pada id_jenis.
 - sumber_sampah (id_sumber, jenis_sumber, deskripsi) — dipisahkan karena hanya bergantung pada id_sumber.
 - alat_pemantauan (id_alat, nama_alat, jenis_alat, kondisi, tanggal_kalibrasi) — dipisahkan karena hanya bergantung pada id_alat.
-Setelah pemisahan tersebut, tabel transaksi yang tersisa hanya menyimpan atribut yang bergantung penuh pada kunci utamanya masing-masing, yaitu pemantauan (id_pemantauan, tanggal_waktu, id_lokasi, kondisi_cuaca, kondisi_arus, catatan_umum) dan hasil_pemantauan (id_hasil, id_pemantauan, id_jenis, id_sumber, volume_m3, berat_kg, jumlah_item, foto_path). Karena satu sesi pemantauan melibatkan beberapa petugas sekaligus (tim), relasi petugas-pemantauan bersifat N:M sehingga direpresentasikan melalui tabel penghubung pemantauan_petugas (id_pemantauan, id_petugas, peran_dalam_pemantauan) — atribut id_petugas tidak lagi menjadi FK langsung di tabel pemantauan. Dengan demikian seluruh atribut non-kunci pada setiap tabel telah bergantung penuh pada primary key tabel tersebut (functional dependency penuh), sehingga struktur ini telah memenuhi 2NF.
+Setelah pemisahan tersebut, tabel transaksi yang tersisa hanya menyimpan atribut yang bergantung penuh pada kunci utamanya masing-masing, yaitu pemantauan (id_pemantauan, tanggal_waktu, id_lokasi, kondisi_cuaca, kondisi_arus, catatan_umum) dan hasil_pemantauan (id_hasil, id_pemantauan, id_jenis, id_sumber, volume_m3, berat_kg, jumlah_item, foto_path). 
+Karena satu sesi pemantauan melibatkan beberapa petugas sekaligus (tim), relasi petugas-pemantauan bersifat N:M sehingga direpresentasikan melalui tabel penghubung pemantauan_petugas (id_pemantauan, id_petugas, peran_dalam_pemantauan) — atribut id_petugas tidak lagi menjadi FK langsung di tabel pemantauan. Dengan demikian seluruh atribut non-kunci pada setiap tabel telah bergantung penuh pada primary key tabel tersebut (functional dependency penuh), sehingga struktur ini telah memenuhi 2NF. Ilustrasi hasil dekomposisi ke 2NF ditampilkan pada tabel-tabel berikut:
+
+| id_pemantauan | tanggal_waktu | id_lokasi (FK) | kondisi_cuaca | kondisi_arus | catatan_umum |
+| --- | --- | --- | --- | --- | --- |
+| P001 | 14/06/2026 08:00 | L001 | Cerah | Tenang | - |
+| P002 | 15/06/2026 09:30 | L002 | Berawan | Sedang | Area padat |
+Tabel 3. Hasil Dekomposisi 2NF — Tabel pemantauan
+
+| id_hasil | id_pemantauan (FK) | id_jenis (FK) | id_sumber (FK) | volume_m3 | berat_kg |
+| --- | --- | --- | --- | --- | --- |
+| H001 | P001 | J001 | S001 | 15.0 | 22.5 |
+| H002 | P001 | J002 | S003 | 8.0 | 10.0 |
+| H003 | P002 | J003 | S002 | 3.0 | 9.0 |
+Tabel 4. Hasil Dekomposisi 2NF — Tabel hasil_pemantauan (atribut non-kunci bergantung penuh pada id_hasil)
+
+Keterangan: Pada tabel pemantauan, seluruh atribut (tanggal_waktu, id_lokasi, kondisi_cuaca, kondisi_arus, catatan_umum) bergantung penuh pada id_pemantauan. Pada tabel hasil_pemantauan, seluruh atribut bergantung penuh pada id_hasil. Referensi ke entitas lain menggunakan FK sehingga tidak ada lagi redundansi data nama lokasi, nama jenis sampah, atau nama sumber yang berulang di setiap baris.
+
 
 ### d. Bentuk Normal Ketiga (3NF)
 Tahap akhir 3NF memeriksa apakah masih terdapat dependensi transitif, yaitu atribut non-kunci yang bergantung pada atribut non-kunci lain (bukan pada primary key secara langsung). Pemeriksaan dilakukan pada setiap tabel hasil 2NF:
 - Pada tabel jenis_sampah, atribut tingkat_bahaya sekilas tampak bergantung pada kategori (misalnya kategori B3 cenderung berbahaya tinggi). Namun pada kenyataannya tingkat bahaya dapat berbeda meskipun kategori sama (contoh: kategori plastik dapat berstatus rendah maupun tinggi tergantung jenis spesifiknya), sehingga tingkat_bahaya tetap merupakan atribut yang bergantung langsung pada id_jenis, bukan dependensi transitif melalui kategori.
 - Pada tabel lokasi, atribut provinsi dan kabupaten disimpan sebagai atribut langsung dari id_lokasi (bukan diturunkan dari atribut lain) sehingga tidak menimbulkan dependensi transitif.
 - Pada tabel petugas, atribut unit_kerja dan wilayah_tugas masing-masing bergantung langsung pada id_petugas dan tidak diturunkan dari atribut non-kunci lainnya.
-Karena tidak ditemukan dependensi transitif pada seluruh tabel, maka struktur data telah memenuhi Bentuk Normal Ketiga (3NF). Untuk mengakomodasi relasi many-to-many yang teridentifikasi selama proses analisis (pemantauan dengan alat_pemantauan, pembersihan dengan petugas, serta pemantauan dengan petugas), ditambahkan tiga tabel penghubung, yaitu pemantauan_alat, pembersihan_petugas, dan pemantauan_petugas. Hasil akhir normalisasi ini menghasilkan 11 (sebelas) tabel sebagaimana digambarkan pada ERD di Bagian 1 dan dirinci pada Kamus Data di Bagian 3.
+Karena tidak ditemukan dependensi transitif pada seluruh tabel, maka struktur data telah memenuhi Bentuk Normal Ketiga (3NF). Untuk mengakomodasi relasi many-to-many yang teridentifikasi selama proses analisis (pemantauan dengan alat_pemantauan, pembersihan dengan petugas, serta pemantauan dengan petugas), ditambahkan tiga tabel penghubung, yaitu pemantauan_alat, pembersihan_petugas, dan pemantauan_petugas. Hasil akhir normalisasi ini menghasilkan 11 (sebelas) tabel sebagaimana digambarkan pada ERD di Bagian 1 dan dirinci pada Kamus Data di Bagian 3. Ringkasan pemeriksaan dependensi transitif pada seluruh tabel ditampilkan berikut ini:
+
+| Tabel | Primary Key | Dependensi Transitif? | Status 3NF |
+| --- | --- | --- | --- |
+| lokasi | id_lokasi | Tidak. provinsi dan kabupaten bergantung langsung pada id_lokasi, bukan diturunkan dari atribut non-kunci lainnya. | ✓ Memenuhi 3NF |
+| jenis_sampah | id_jenis | Tidak. tingkat_bahaya tampak bergantung pada kategori, namun pada praktiknya tingkat bahaya tetap ditentukan per id_jenis, bukan per kategori. | ✓ Memenuhi 3NF |
+| petugas | id_petugas | Tidak. unit_kerja dan wilayah_tugas masing-masing bergantung langsung pada id_petugas. | ✓ Memenuhi 3NF |
+| sumber_sampah | id_sumber | Tidak. Hanya dua atribut non-kunci (jenis_sumber, deskripsi), keduanya bergantung langsung pada id_sumber. | ✓ Memenuhi 3NF |
+| alat_pemantauan | id_alat | Tidak. nama_alat, jenis_alat, kondisi, tanggal_kalibrasi semuanya bergantung langsung pada id_alat. | ✓ Memenuhi 3NF |
+| pemantauan | id_pemantauan | Tidak. kondisi_cuaca, kondisi_arus, catatan_umum tidak diturunkan dari atribut lain; id_lokasi adalah FK bukan atribut non-kunci independen. | ✓ Memenuhi 3NF |
+| hasil_pemantauan | id_hasil | Tidak. volume_m3, berat_kg, jumlah_item, foto_path bergantung langsung pada id_hasil. FK hanya sebagai referensi, bukan atribut non-kunci derivatif. | ✓ Memenuhi 3NF |
+| pembersihan | id_pembersihan | Tidak. tanggal_pelaksanaan, volume_terangkut, tujuan_pembuangan, catatan semuanya bergantung langsung pada id_pembersihan. | ✓ Memenuhi 3NF |
+| Tabel Junction (3 tabel) | PK Komposit | Tidak. Setiap atribut tambahan (kondisi_pakai, peran_petugas, peran_dalam_pemantauan) bergantung langsung pada PK komposit masing-masing tabel. | ✓ Memenuhi 3NF |
+Tabel 5. Ringkasan Pemeriksaan Dependensi Transitif pada Seluruh Tabel (3NF)
 
 ## 5. REVISI ANALISIS KEBUTUHAN (JIKA ADA)
 Selama proses perancangan ERD, normalisasi, dan penyusunan kamus data pada Progres 2, ditemukan beberapa hal pada hasil analisis kebutuhan Progres 1 yang perlu disempurnakan agar struktur basis data lebih akurat, konsisten, dan bebas dari redundansi maupun anomali data. Ringkasan revisi adalah sebagai berikut:
