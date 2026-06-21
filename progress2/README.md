@@ -5,7 +5,9 @@ SISTEM MONITORING SAMPAH LAUT
 <img width="472" height="472" alt="image" src="https://github.com/user-attachments/assets/6cb50b96-5ab9-48fd-91c1-86f66fb7ad14" />
 
 Mata Kuliah: Sistem Basis Data
+
 Dosen: Ferdi Chahyadi M.Kom
+
 Disusun oleh:
 Kelompok 8
 
