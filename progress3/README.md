@@ -1,6 +1,6 @@
-PROJECT BASED LEARNING (PjBL)
-PROGRES 3 – PERANCANGAN BASIS DATA
-SISTEM MONITORING SAMPAH LAUT
+# PROJECT BASED LEARNING (PjBL)
+## PROGRES 3 – PERANCANGAN BASIS DATA
+## SISTEM MONITORING SAMPAH LAUT
 
 
 
@@ -14,6 +14,7 @@ Kelompok 8
 | Putra Ali Syahbana | 2501020088 |
 | Rizky Akbar Hidayatullah | 2501020113 |
 | M. Riquelma Zidan | 2501020110 |
+
 Program Studi: Sistem Basis Data
 Tahun 2025/2026
 Deadline Progres 3: 28 Juni 2026
@@ -21,7 +22,7 @@ Deadline Progres 3: 28 Juni 2026
 SCRIPT SQL DDL (CREATE DATABASE & CREATE TABLE)
 Berikut adalah script Data Definition Language (DDL) untuk membuat database dan seluruh tabel berdasarkan Kamus Data pada Progres 2.
 
-Pembuatan Database
+### Pembuatan Database
 CREATE DATABASE sistem_monitoring_sampah_laut;
 USE sistem_monitoring_sampah_laut;
 
@@ -141,7 +142,7 @@ NOT NULL: Diterapkan pada atribut-atribut vital (seperti nama_lokasi, tanggal_wa
 
 DATA UJI (INSERT)
 
-Insert Data Master
+### Insert Data Master
 INSERT INTO lokasi (nama_lokasi, latitude, longitude, jenis_perairan, provinsi, kabupaten, deskripsi) VALUES
 ('Pantai Nongsa', 1.150000, 104.083000, 'Pesisir', 'Kepulauan Riau', 'Batam', 'Area pantai dekat resort'),
 ('Pantai Trikora', 1.210000, 104.250000, 'Pesisir', 'Kepulauan Riau', 'Batam', 'Area wisata pantai timur'),
@@ -168,7 +169,7 @@ INSERT INTO alat_pemantauan (nama_alat, jenis_alat, kondisi, tanggal_kalibrasi) 
 ('Drone DJI Mavic', 'Pemetaan Udara', 'Baik', '2026-02-10'),
 ('Water Quality Meter', 'Pengukur Kualitas Air', 'Perlu Kalibrasi', '2025-06-01');
 
-Insert Data Transaksi
+### Insert Data Transaksi
 INSERT INTO pemantauan (tanggal_waktu, id_lokasi, kondisi_cuaca, kondisi_arus, catatan_umum) VALUES
 ('2026-06-14 08:00:00', 1, 'Cerah', 'Lambat', 'Pemantauan rutin pagi hari'),
 ('2026-06-15 09:30:00', 2, 'Berawan', 'Sedang', 'Banyak sampah pasca akhir pekan'),
@@ -185,7 +186,7 @@ INSERT INTO pembersihan (id_pemantauan, tanggal_pelaksanaan, volume_terangkut, t
 (1, '2026-06-14 14:00:00', 20.0, 'TPA Batu Ampar', 'Pembersihan sore hari'),
 (2, '2026-06-16 08:00:00', 25.0, 'TPA Batu Ampar', 'Kaca dipisahkan dengan aman');
 
-Insert Data Junction (Relasi N:M)
+### Insert Data Junction (Relasi N:M)
 INSERT INTO pemantauan_petugas (id_pemantauan, id_petugas, peran_dalam_pemantauan) VALUES
 (1, 1, 'Ketua Tim'), (1, 2, 'Pencatat'),
 (2, 1, 'Ketua Tim'), (2, 3, 'Fotografer'),
@@ -202,86 +203,86 @@ INSERT INTO pembersihan_petugas (id_pembersihan, id_petugas, peran_petugas) VALU
 
 QUERY SQL
 Berikut adalah 15 query yang mencakup operasi dasar, JOIN, Agregasi, Subquery, dan Modifikasi Data.
-Query 1: Menampilkan seluruh data lokasi pemantauan
+#### Query 1: Menampilkan seluruh data lokasi pemantauan
 SELECT id_lokasi, nama_lokasi, jenis_perairan, kabupaten FROM lokasi;
-Query 2: Menampilkan jenis sampah dengan tingkat bahaya 'Tinggi'
+#### Query 2: Menampilkan jenis sampah dengan tingkat bahaya 'Tinggi'
 SELECT nama_jenis, kategori, tingkat_bahaya FROM jenis_sampah WHERE tingkat_bahaya = 'Tinggi';
-Query 3: JOIN - Menampilkan hasil pemantauan lengkap dengan nama lokasi dan jenis sampah
+#### Query 3: JOIN - Menampilkan hasil pemantauan lengkap dengan nama lokasi dan jenis sampah
 SELECT p.tanggal_waktu, l.nama_lokasi, js.nama_jenis, hp.berat_kg 
 FROM hasil_pemantauan hp
 JOIN pemantauan p ON hp.id_pemantauan = p.id_pemantauan
 JOIN lokasi l ON p.id_lokasi = l.id_lokasi
 JOIN jenis_sampah js ON hp.id_jenis = js.id_jenis;
-Query 4: JOIN 3 Tabel - Menampilkan petugas yang terlibat dalam suatu sesi pemantauan beserta lokasinya
+#### Query 4: JOIN 3 Tabel - Menampilkan petugas yang terlibat dalam suatu sesi pemantauan beserta lokasinya
 SELECT pt.nama AS nama_petugas, pp.peran_dalam_pemantauan, l.nama_lokasi, p.tanggal_waktu
 FROM pemantauan_petugas pp
 JOIN petugas pt ON pp.id_petugas = pt.id_petugas
 JOIN pemantauan p ON pp.id_pemantauan = p.id_pemantauan
 JOIN lokasi l ON p.id_lokasi = l.id_lokasi;
-Query 5: Agregasi - Menghitung total berat sampah (kg) berdasarkan jenis sampah
+#### Query 5: Agregasi - Menghitung total berat sampah (kg) berdasarkan jenis sampah
 SELECT js.nama_jenis, SUM(hp.berat_kg) AS total_berat_kg
 FROM hasil_pemantauan hp
 JOIN jenis_sampah js ON hp.id_jenis = js.id_jenis
 GROUP BY js.nama_jenis
 ORDER BY total_berat_kg DESC;
-Query 6: Agregasi & HAVING - Menampilkan lokasi dengan total volume sampah > 20 m3
+#### Query 6: Agregasi & HAVING - Menampilkan lokasi dengan total volume sampah > 20 m3
 SELECT l.nama_lokasi, SUM(hp.volume_m3) AS total_volume_m3
 FROM hasil_pemantauan hp
 JOIN pemantauan p ON hp.id_pemantauan = p.id_pemantauan
 JOIN lokasi l ON p.id_lokasi = l.id_lokasi
 GROUP BY l.nama_lokasi
 HAVING total_volume_m3 > 20;
-Query 7: Subquery - Menampilkan data petugas yang pernah terlibat dalam kegiatan pembersihan
+#### Query 7: Subquery - Menampilkan data petugas yang pernah terlibat dalam kegiatan pembersihan
 SELECT nama, jabatan, unit_kerja 
 FROM petugas 
 WHERE id_petugas IN (SELECT DISTINCT id_petugas FROM pembersihan_petugas);
-Query 8: LEFT JOIN - Menampilkan lokasi dan jumlah kegiatan pembersihannya (termasuk yang belum pernah dibersihkan)
+#### Query 8: LEFT JOIN - Menampilkan lokasi dan jumlah kegiatan pembersihannya (termasuk yang belum pernah dibersihkan)
 SELECT l.nama_lokasi, COUNT(pb.id_pembersihan) AS jumlah_kegiatan_bersih
 FROM lokasi l
 LEFT JOIN pemantauan p ON l.id_lokasi = p.id_lokasi
 LEFT JOIN pembersihan pb ON p.id_pemantauan = pb.id_pemantauan
 GROUP BY l.nama_lokasi;
-Query 9: Filter Tanggal - Menampilkan pemantauan yang dilakukan pada bulan Juni 2026
+#### Query 9: Filter Tanggal - Menampilkan pemantauan yang dilakukan pada bulan Juni 2026
 SELECT id_pemantauan, tanggal_waktu, kondisi_cuaca 
 FROM pemantauan 
 WHERE MONTH(tanggal_waktu) = 6 AND YEAR(tanggal_waktu) = 2026;
-Query 10: Complex JOIN - Laporan Rekapitulasi Sampah per Sumber
+#### Query 10: Complex JOIN - Laporan Rekapitulasi Sampah per Sumber
 SELECT ss.jenis_sumber, js.nama_jenis, SUM(hp.jumlah_item) AS total_item, SUM(hp.berat_kg) AS total_berat
 FROM hasil_pemantauan hp
 JOIN sumber_sampah ss ON hp.id_sumber = ss.id_sumber
 JOIN jenis_sampah js ON hp.id_jenis = js.id_jenis
 GROUP BY ss.jenis_sumber, js.nama_jenis
 ORDER BY ss.jenis_sumber;
-Query 11: UPDATE - Mengubah kondisi alat pemantauan setelah digunakan
+#### Query 11: UPDATE - Mengubah kondisi alat pemantauan setelah digunakan
 UPDATE alat_pemantauan 
 SET kondisi = 'Perlu Perawatan', tanggal_kalibrasi = NULL 
 WHERE id_alat = 2;
-Query 12: UPDATE - Menambahkan catatan umum pada sesi pemantauan
+#### Query 12: UPDATE - Menambahkan catatan umum pada sesi pemantauan
 UPDATE pemantauan 
 SET catatan_umum = 'Pemantauan rutin pagi hari, ditemukan banyak sampah plastik domestik.' 
 WHERE id_pemantauan = 1;
-Query 13: DELETE - Menghapus data uji pembersihan (Skenario pembatalan kegiatan)
+#### Query 13: DELETE - Menghapus data uji pembersihan (Skenario pembatalan kegiatan)
 DELETE FROM pembersihan WHERE id_pembersihan = 2;
 -- Catatan: Karena menggunakan ON DELETE CASCADE, data di pembersihan_petugas dengan id_pembersihan=2 akan otomatis terhapus.
-Query 14: Agregasi - Rata-rata berat sampah per sesi pemantauan
+#### Query 14: Agregasi - Rata-rata berat sampah per sesi pemantauan
 SELECT p.id_pemantauan, l.nama_lokasi, AVG(hp.berat_kg) AS rata_rata_berat_per_jenis
 FROM hasil_pemantauan hp
 JOIN pemantauan p ON hp.id_pemantauan = p.id_pemantauan
 JOIN lokasi l ON p.id_lokasi = l.id_lokasi
 GROUP BY p.id_pemantauan, l.nama_lokasi;
-Query 15: INSERT - Menambahkan data petugas baru (Operasional)
+#### Query 15: INSERT - Menambahkan data petugas baru (Operasional)
 INSERT INTO petugas (nama, no_identitas, jabatan, unit_kerja, kontak, wilayah_tugas) 
 VALUES ('M. Riquelma Zidan', 'PTG-004', 'Relawan', 'Komunitas Laut Bersih', '081234567893', 'Batam Selatan');
 
 SKENARIO PENGUJIAN
-Skenario 1: Uji Constraint UNIQUE
+#### Skenario 1: Uji Constraint UNIQUE
 Tujuan: Membuktikan bahwa kolom no_identitas di tabel petugas tidak boleh ada yang sama (duplikat). Query yang dijalankan:
 
 -- Mencoba insert petugas baru dengan no_identitas 'PTG-001' yang sudah ada di data uji
 INSERT INTO petugas (nama, no_identitas, jabatan, unit_kerja, kontak, wilayah_tugas) 
 VALUES ('Petugas Test', 'PTG-001', 'Tester', 'Unit Test', '08111111111', 'Test');
 
-Skenario 2: Uji Constraint FOREIGN KEY
+#### Skenario 2: Uji Constraint FOREIGN KEY
 Tujuan: Membuktikan bahwa data anak (hasil_pemantauan) tidak bisa di-insert jika data induk (pemantauan) tidak ada. Query yang dijalankan:
 
 -- Mencoba insert hasil pemantauan dengan id_pemantauan = 99 (padahal di tabel pemantauan hanya ada id 1, 2, 3)
@@ -289,7 +290,7 @@ INSERT INTO hasil_pemantauan (id_pemantauan, id_jenis, id_sumber, volume_m3, ber
 VALUES (99, 1, 1, 10.0, 15.0, 50);
 
 
-Skenario 3: Uji CASCADE DELETE
+#### Skenario 3: Uji CASCADE DELETE
 Tujuan: Membuktikan bahwa jika data induk (pemantauan) dihapus, data anak yang berelasi akan otomatis terhapus. Query yang dijalankan:
 
 -- 1. Cek data hasil pemantauan untuk id 3 sebelum dihapus (sebagai bukti awal)
@@ -301,13 +302,13 @@ DELETE FROM pemantauan WHERE id_pemantauan = 3;
 -- 3. Cek kembali data hasil pemantauan untuk id 3 (harusnya hasilnya kosong/0 rows)
 SELECT * FROM hasil_pemantauan WHERE id_pemantauan = 3;
 
-Skenario 4: Uji RESTRICT DELETE
+#### Skenario 4: Uji RESTRICT DELETE
 Tujuan: Membuktikan bahwa data induk (lokasi) tidak bisa dihapus jika masih digunakan oleh data anak (pemantauan). Query yang dijalankan:
 
 -- Mencoba menghapus lokasi id 1 (Pantai Nongsa), padahal masih direferensikan oleh pemantauan id 1
 DELETE FROM lokasi WHERE id_lokasi = 1;
 
-Skenario 5: Uji Query Laporan (JOIN & Agregasi)
+#### Skenario 5: Uji Query Laporan (JOIN & Agregasi)
 Tujuan: Membuktikan query untuk laporan rekapitulasi berjalan dengan benar. Query yang dijalankan: (Ini adalah Query 5 dan Query 6 dari daftar 15 query)
 Query 5 (Total Berat per Jenis):
 
@@ -326,7 +327,7 @@ JOIN lokasi l ON p.id_lokasi = l.id_lokasi
 GROUP BY l.nama_lokasi
 HAVING total_volume_m3 > 20;
 
-Skenario 6: Uji Query Modifikasi (UPDATE)
+#### Skenario 6: Uji Query Modifikasi (UPDATE)
 Tujuan: Membuktikan bahwa data di database dapat diperbarui (update) dengan benar. Query yang dijalankan: (Ini adalah Query 11 dari daftar 15 query)
 
 -- 1. Cek kondisi alat id 3 sebelum diupdate
@@ -500,6 +501,5 @@ Gambar 6.43. Output Query 13 – Pembuktian DELETE dengan CASCADE
 
 Query 14 – Agregasi Rata-rata Berat per Sesi Pemantauan 
 Gambar 6.44. Output Query 14 – Rata-rata Berat Sampah per Sesi
-
 Query 15 – INSERT Petugas Baru 
- Gambar 6.45. Output Query 15 – Pembuktian INSERT Petugas Baru
+Gambar 6.45. Output Query 15 – Pembuktian INSERT Petugas Baru
