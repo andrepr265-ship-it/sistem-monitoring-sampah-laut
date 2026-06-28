@@ -504,153 +504,200 @@ SELECT id_alat, nama_alat, kondisi, tanggal_kalibrasi FROM alat_pemantauan WHERE
 ### Struktur Database dan Tabel
  
 #### Daftar Database yang Dibuat
- 
+
+<img width="584" height="165" alt="image" src="https://github.com/user-attachments/assets/c69f0953-7407-4614-b48c-7c77ca01cde3" />
+
 *Gambar 6.1. Database sistem_monitoring_sampah_laut Berhasil Dibuat*
  
 #### Tabel dan Struktur
- 
+
+ <img width="422" height="364" alt="image" src="https://github.com/user-attachments/assets/b476381f-d158-47a5-9cef-2d0ce06b99a2" />
 *Gambar 6.2. Tabel lokasi dan struktur*
- 
+
+ <img width="427" height="276" alt="image" src="https://github.com/user-attachments/assets/39e7c17b-1e5b-45aa-b199-84d73521db2f" />
 *Gambar 6.3. Tabel jenis_sampah dan struktur*
- 
+
+ <img width="427" height="329" alt="image" src="https://github.com/user-attachments/assets/f523f6c3-1231-447f-bf23-5a9c22365697" />
 *Gambar 6.4. Tabel petugas dan struktur*
- 
+
+ <img width="423" height="227" alt="image" src="https://github.com/user-attachments/assets/18c46c48-310a-4543-9800-3b3121f90045" />
 *Gambar 6.5. Tabel sumber_sampah struktur*
- 
+
+ <img width="445" height="273" alt="image" src="https://github.com/user-attachments/assets/1819e6eb-aa12-46a3-a2c8-d82d73e1873a" />
 *Gambar 6.6. Tabel alat_pemantauan dan struktur*
- 
+
+ <img width="519" height="298" alt="image" src="https://github.com/user-attachments/assets/d1e341fc-cc9f-4ba9-a13a-a4e6b5bc6609" />
 *Gambar 6.7. Tabel hasil_pemantauan dan struktur*
- 
+
+ <img width="573" height="360" alt="image" src="https://github.com/user-attachments/assets/ccb38e09-ece2-44b2-be4a-15cc2afb13ec" />
 *Gambar 6.8. Tabel pembersihan dan struktur*
- 
+
+ <img width="574" height="292" alt="image" src="https://github.com/user-attachments/assets/ccda45bc-9d32-42b8-b9e3-fc5eb1eeec9e" />
 *Gambar 6.9. Tabel pembersihan dan struktur*
- 
+
+ <img width="599" height="259" alt="image" src="https://github.com/user-attachments/assets/f0331650-29e3-400a-9f06-846218fdaad0" />
 *Gambar 6.10. Tabel alat_pemantauan_alat dan struktur*
- 
+
+ <img width="604" height="256" alt="image" src="https://github.com/user-attachments/assets/fc51dee6-ec23-4e22-b763-38d4e5681686" />
 *Gambar 6.11. Tabel pembersihan_petugas dan struktur*
- 
+
+ <img width="607" height="256" alt="image" src="https://github.com/user-attachments/assets/eb32be60-1d90-40fd-a148-637ead37314a" />
 *Gambar 6.12. Tabel pemantauan_petugas dan struktur*
  
 ### Bukti Data Uji (INSERT) Berhasil Dimasukkan
  
 #### Data Master
- 
+
+ <img width="975" height="264" alt="image" src="https://github.com/user-attachments/assets/2f2c8d1e-3116-4fb1-b2b6-10a1d4905f98" />
 *Gambar 6.13. Data Tabel Lokasi (3 Record)*
- 
+
+ <img width="975" height="354" alt="image" src="https://github.com/user-attachments/assets/4688fab1-54ed-46ef-a857-5bac9d75906d" />
 *Gambar 6.14. Data Tabel Jenis Sampah (4 Record)*
- 
+
+ <img width="975" height="287" alt="image" src="https://github.com/user-attachments/assets/a037c029-c9e5-41c5-8f56-f1b4931b163c" />
 *Gambar 6.15. Data Tabel Petugas (3 Record)*
- 
+
+ <img width="898" height="354" alt="image" src="https://github.com/user-attachments/assets/0c940359-7775-4ac6-8525-cb49c36f118c" />
 *Gambar 6.16. Data Tabel Sumber Sampah (3 Record)*
- 
-*Gambar 6.27. Data Tabel Alat Pemantauan (3 Record)*
+
+ <img width="975" height="299" alt="image" src="https://github.com/user-attachments/assets/ede2074b-69d8-423f-8cd2-65591e8ec855" />
+*Gambar 6.17. Data Tabel Alat Pemantauan (3 Record)*
  
 #### Data Transaksi
- 
+
+ <img width="975" height="270" alt="image" src="https://github.com/user-attachments/assets/59ca3554-dd9a-49a3-821c-9d1192562906" />
 *Gambar 6.18. Data Tabel Pemantauan (3 Record)*
- 
+
+ <img width="975" height="299" alt="image" src="https://github.com/user-attachments/assets/348f9a7f-30a6-48bd-b51c-e9f611e4d6f7" />
 *Gambar 6.19. Data Tabel Hasil Pemantauan (5 Record)*
- 
+
+ <img width="975" height="225" alt="image" src="https://github.com/user-attachments/assets/d7c990c0-bc86-4e11-bccd-f53e7919421c" />
 *Gambar 6.20. Data Tabel Pembersihan (2 Record)*
- 
+
+ <img width="975" height="326" alt="image" src="https://github.com/user-attachments/assets/3a8ee8d2-badf-46d0-97e8-08c00d0ecae7" />
 *Gambar 6.21. Data Tabel Pemantauan Petugas (5 Record)*
- 
+
+ <img width="975" height="369" alt="image" src="https://github.com/user-attachments/assets/c02c5cf4-8d6d-4770-8e3f-c21db9f08997" />
 *Gambar 6.22. Data Tabel Pemantauan Alat (5 Record)*
- 
+
+ <img width="975" height="314" alt="image" src="https://github.com/user-attachments/assets/6fb7d8e2-7229-499e-850b-6e0c555caba8" />
 *Gambar 6.23. Data Tabel Pembersihan Petugas (4 Record)*
  
 ### Bukti Skenario Pengujian Constraint
  
 #### Skenario 1 – Uji Constraint UNIQUE
- 
+
+ <img width="975" height="77" alt="image" src="https://github.com/user-attachments/assets/9775c5e1-38ee-4b39-8a96-12e9b9f24a53" />
 *Gambar 6.24. Hasil Uji Constraint UNIQUE – Error Duplicate Entry*
  
 #### Skenario 2 – Uji Constraint FOREIGN KEY
- 
+
+ <img width="975" height="58" alt="image" src="https://github.com/user-attachments/assets/32598123-d81f-4e70-ace4-1ca8e58b8001" />
 *Gambar 6.25. Hasil Uji Constraint FOREIGN KEY – Error Child Row*
  
 #### Skenario 3 – Uji CASCADE DELETE
- 
+
+ <img width="975" height="268" alt="image" src="https://github.com/user-attachments/assets/f3378bea-bacf-4d30-98c0-1dc021addbd8" />
 *Gambar 6.26. Hasil Uji ON DELETE CASCADE – Data Anak Otomatis Terhapus*
  
 #### Skenario 4 – Uji RESTRICT DELETE
- 
+
+ <img width="975" height="46" alt="image" src="https://github.com/user-attachments/assets/7af10223-f394-4e69-97a0-261fedcd5148" />
 *Gambar 6.27. Hasil Uji ON DELETE RESTRICT – Data Indak Tidak Bisa Dihapus*
  
 #### Skenario 5 – Uji Query JOIN dan Agregasi
  
 **Query 5 – Total Berat Sampah per Jenis:**
- 
+
+ <img width="781" height="246" alt="image" src="https://github.com/user-attachments/assets/8cae4876-33d6-49b8-afd8-e2989103c0a3" />
 *Gambar 6.28. Output Query 5 – Total Berat Sampah per Jenis*
  
 **Query 6 – Lokasi dengan Volume > 20 m³:**
- 
+
+ <img width="801" height="250" alt="image" src="https://github.com/user-attachments/assets/774147a7-fe73-4d00-9971-a9244ad957f4" />
 *Gambar 6.29. Output Query 6 – Lokasi dengan Volume Sampah > 20 m³*
  
 #### Skenario 6 – Uji Query UPDATE
  
 **Query 11 – UPDATE Kondisi Alat:**
- 
+
+ <img width="975" height="352" alt="image" src="https://github.com/user-attachments/assets/71eebf24-dae4-4a3f-8a7c-49e5ac75190a" />
 *Gambar 6.30. Output Query 11 – Pembuktian UPDATE Data Alat*
  
 ### Hasil Eksekusi 15 Query SQL
  
 #### Query 1 – Menampilkan Seluruh Data Lokasi
- 
+
+ <img width="884" height="178" alt="image" src="https://github.com/user-attachments/assets/20a59288-1240-44cf-a857-e60924a4f7d2" />
 *Gambar 6.31. Output Query 1 – Daftar Lokasi Pemantauan*
  
 #### Query 2 – Filter Jenis Sampah Berbahaya Tinggi
- 
+
+ <img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/3bcfd5a0-a2be-41ca-9d19-808c2b45277b" />
 *Gambar 6.32. Output Query 2 – Jenis Sampah Tingkat Bahaya Tinggi*
  
 #### Query 3 – JOIN Tabel Hasil Pemantauan dengan Lokasi & Jenis Sampah
- 
-*Gambar 6.33. Output Query 3 – Laporan Hasil Pemantauan Lengkap*
+
+ <img width="859" height="259" alt="image" src="https://github.com/user-attachments/assets/d1fe32e2-e607-4ed9-82df-44921b6edc40" />
+*Gambar 6.33. Output Query 3 – Laporan Hasil Pemantauan Lengkap*<img width="781" height="246" alt="image" src="https://github.com/user-attachments/assets/5473a9ba-112d-4e3e-b2ad-4c2f45819cd5" />
+
  
 #### Query 4 – JOIN 4 Tabel Petugas dalam Pemantauan
- 
+
+ <img width="975" height="241" alt="image" src="https://github.com/user-attachments/assets/e024fe01-46eb-4791-aead-873c711a6879" />
 *Gambar 6.34. Output Query 4 – Petugas yang Terlibat dalam Pemantauan*
  
 #### Query 5 – Agregasi Total Berat Sampah per Jenis
- 
+
+ <img width="801" height="250" alt="image" src="https://github.com/user-attachments/assets/b4fdf5de-e3cf-4ff8-bf77-834feb372267" />
 *Gambar 6.35. Output Query 5 – Total Berat Sampah per Jenis*
  
 #### Query 6 – Agregasi dengan HAVING (Volume > 20 m³)
- 
+
+ <img width="659" height="216" alt="image" src="https://github.com/user-attachments/assets/81cbed7e-7377-482b-9eb0-e7bd4735138a" />
 *Gambar 6.36. Output Query 6 – Lokasi dengan Volume Sampah > 20 m³*
  
 #### Query 7 – Subquery Petugas yang Pernah Pembersihan
- 
+
+ <img width="915" height="240" alt="image" src="https://github.com/user-attachments/assets/6d2ce16b-87c4-4716-94ff-5ffec00ea7fd" />
 *Gambar 6.37. Output Query 7 – Petugas Aktif dalam Pembersihan*
  
 #### Query 8 – LEFT JOIN Lokasi dan Jumlah Pembersihan
- 
+
+ <img width="740" height="195" alt="image" src="https://github.com/user-attachments/assets/dcf0adf8-4149-44da-b6b7-7f5b0033e083" />
 *Gambar 6.38. Output Query 8 – Status Pembersihan per Lokasi*
  
 #### Query 9 – Filter Tanggal Pemantauan (Juni 2026)
- 
+
+ <img width="975" height="228" alt="image" src="https://github.com/user-attachments/assets/f2174af4-e5c7-4930-89c8-3832aaa324fa" />
 *Gambar 6.39. Output Query 9 – Pemantauan Bulan Juni 2026*
  
 #### Query 10 – Complex JOIN Rekapitulasi per Sumber & Jenis
- 
+
+ <img width="975" height="352" alt="image" src="https://github.com/user-attachments/assets/52532fbf-72d0-47d3-aa56-17fe9c35d656" />
 *Gambar 6.40. Output Query 10 – Rekapitulasi Sampah per Sumber dan Jenis*
  
 #### Query 11 – UPDATE Kondisi Alat
- 
+
+ <img width="975" height="296" alt="image" src="https://github.com/user-attachments/assets/19aa9a1e-d28d-4756-a6de-c27c489de05f" />
 *Gambar 6.41. Output Query 11 – Pembuktian UPDATE Data Alat*
  
 #### Query 12 – UPDATE Catatan Umum Pemantauan
- 
+
+ <img width="821" height="409" alt="image" src="https://github.com/user-attachments/assets/d0562c5e-393a-49e4-9007-29a1f836cd1c" />
 *Gambar 6.42. Output Query 12 – Update Catatan Pemantauan*
  
 #### Query 13 – DELETE Pembersihan (Uji CASCADE Sekunder)
- 
+
+ <img width="975" height="219" alt="image" src="https://github.com/user-attachments/assets/68beea9d-741c-4e19-9cd3-a4e8ce4c5e3b" />
 *Gambar 6.43. Output Query 13 – Pembuktian DELETE dengan CASCADE*
  
 #### Query 14 – Agregasi Rata-rata Berat per Sesi Pemantauan
- 
+
+ <img width="975" height="406" alt="image" src="https://github.com/user-attachments/assets/eacb484e-bc91-477d-a4e0-1ccd068888a4" />
 *Gambar 6.44. Output Query 14 – Rata-rata Berat Sampah per Sesi*
  
 #### Query 15 – INSERT Petugas Baru
- 
+
+ ![Uploading image.png…]()
 *Gambar 6.45. Output Query 15 – Pembuktian INSERT Petugas Baru*
