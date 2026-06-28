@@ -2,14 +2,7 @@
 
 <div align="center">
 
-
 **Presentasi Proyek Sistem Monitoring Sampah Laut**
-
-[Video Presentasi](#-link-video-presentasi) • [Tim](#-tim-pengembang) • [Deskripsi](#-deskripsi)
-
-</div>
-
----
 
 ## Deskripsi
 
