@@ -53,8 +53,8 @@ Folder ini berisi presentasi dari proyek **Sistem Monitoring Sampah Laut** yang 
 
 <div align="center">
 
-- **Google Drive:**
+**Google Drive:**
 https://drive.google.com/file/d/179M0wAIlqTnylC_EewNTGaz384Q8OP33/view?usp=drivesdk
 
-- **Youtube:**
+**Youtube:**
 https://youtu.be/S9CV7MSy8WY?si=JtXK9O74BhXXYLz3
