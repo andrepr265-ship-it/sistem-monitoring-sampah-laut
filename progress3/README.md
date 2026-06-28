@@ -3,6 +3,8 @@
 ## PROGRES 3 – PERANCANGAN BASIS DATA
  
 ## SISTEM MONITORING SAMPAH LAUT
+
+<img width="472" height="472" alt="image" src="https://github.com/user-attachments/assets/7bbc037f-23ac-4a5e-a1d3-d99fd06a4189" />
  
 Mata Kuliah: Sistem Basis Data
  
