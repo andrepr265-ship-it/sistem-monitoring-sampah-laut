@@ -499,7 +499,8 @@ SELECT id_alat, nama_alat, kondisi, tanggal_kalibrasi FROM alat_pemantauan WHERE
 ---
  
 ## SCREENSHOT HASIL IMPLEMENTASI DAN QUERY
- 
+**NOTE: Gambar bisa dilihat pada file progress3.docx**
+
 ### Struktur Database dan Tabel
  
 #### Daftar Database yang Dibuat
