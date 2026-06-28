@@ -1,7 +1,7 @@
 # Presentasi Sistem Monitoring Sampah Laut
 
 ## Deskripsi
-Folder ini berisi materi presentasi untuk proyek **Sistem Monitoring Sampah Laut** - dari **Kelompok 8**.
+Folder ini berisi presentasi dari proyek **Sistem Monitoring Sampah Laut** - by **Kelompok 8**.
 
 ### **Link Video Presentasi** 
 
