@@ -256,7 +256,7 @@ Proses bisnis sistem digambarkan melalui Use Case Diagram pada Gambar 3.1 beriku
  
 **Gambar 1 Use Case Diagram – Sistem Monitoring Sampah Laut**
  
-![Gambar 1 Use Case Diagram – Sistem Monitoring Sampah Laut](images/image2.png)
+<img width="1098" height="1236" alt="image" src="https://github.com/user-attachments/assets/53287057-e168-4374-b7c6-8bf95af098d5" />
  
 Berdasarkan diagram tersebut, proses bisnis berjalan dalam tahapan berikut:
  
@@ -273,7 +273,7 @@ Berdasarkan diagram tersebut, proses bisnis berjalan dalam tahapan berikut:
  
 **Gambar 2 ERD (Entity Relationship Diagram)**
  
-![Gambar 2 ERD (Entity Relationship Diagram)](images/image3.png)
+<img width="1120" height="705" alt="image" src="https://github.com/user-attachments/assets/e033a408-6fd4-4c35-aa67-0cc1930178a1" />
  
 #### 3.2.1 Penjelasan Entitas
  
