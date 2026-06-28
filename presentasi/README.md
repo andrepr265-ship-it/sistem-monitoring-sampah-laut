@@ -5,7 +5,7 @@
 
 **Presentasi Proyek Sistem Monitoring Sampah Laut**
 
-[📺 Video Presentasi](#-link-video-presentasi) • [👥 Tim](#-tim-pengembang) • [📋 Deskripsi](#-deskripsi)
+[Video Presentasi](#-link-video-presentasi) • [Tim](#-tim-pengembang) • [Deskripsi](#-deskripsi)
 
 </div>
 
@@ -46,10 +46,12 @@ Folder ini berisi presentasi dari proyek **Sistem Monitoring Sampah Laut** yang 
 
 <div align="center">
 
-| Role | Anggota |
-|------|---------|
-| Developer | **Kelompok 8** |
-| Tahun | **2026** |
+| No | Nama | NIM |
+|----|------|-----|
+| 1 | Andre Zulyan Pratama | 2501020115 |
+| 2 | Putra Ali Syabbana | 2501020088 |
+| 3 | Rizky Akbar Hidayatulah | 2501020113 |
+| 4 | M. Riquelma Zidan | 2501020110 |
 
 </div>
 
