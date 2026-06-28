@@ -784,7 +784,9 @@ INSERT INTO pembersihan_petugas (id_pembersihan, id_petugas, peran_petugas) VALU
 ## BAB V – PENGUJIAN DAN QUERY
  
 ### 5.1 Skenario Pengujian
- 
+
+note: foto bisa dilihat pada file "Laporan Akhir PjBL.docx"
+
 **Skenario 1: Uji Constraint UNIQUE**
  
 **Tujuan:** Membuktikan bahwa kolom no_identitas di tabel petugas tidak boleh ada yang sama (duplikat). **Query yang dijalankan:**
