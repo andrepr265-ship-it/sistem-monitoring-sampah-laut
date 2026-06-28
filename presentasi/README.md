@@ -1,4 +1,4 @@
-# 🌊 Sistem Monitoring Sampah Laut 🤖
+# Sistem Monitoring Sampah Laut
 
 <div align="center">
 
@@ -15,30 +15,22 @@
 
 ---
 
-## 📋 Deskripsi
+## Deskripsi
 
 Folder ini berisi presentasi dari proyek **Sistem Monitoring Sampah Laut** yang dikembangkan oleh **Kelompok 8**. 
 
-Proyek ini bertujuan untuk memantau dan mengelola sampah laut menggunakan teknologi modern guna menjaga kelestarian lingkungan laut Indonesia. 🐠🐢
-
-### 🎯 Tujuan Proyek
-- 🌍 Memantau tingkat pencemaran sampah di laut
-- 📊 Menyediakan data real-time tentang kondisi laut
-- 🤝 Meningkatkan kesadaran akan pentingnya menjaga kebersihan laut
-- 💡 Memberikan solusi teknologi untuk masalah lingkungan
-
 ---
 
-## 🎬 Link Video Presentasi
+## Link Video Presentasi
 
-### 📹 Platform Penyajian
+### Platform Penyajian
 
 <div align="center">
 <table>
 <tr>
 <td align="center">
 <b>📂 Google Drive</b><br>
-<a href="https://drive.google.com/file/d/179M0wAIIqTnylC_EewNIGaz384Q080P33/view?usp=drivesdk">
+<a href="https://drive.google.com/file/d/179M0wAIlqTnylC_EewNTGaz384Q8OP33/view?usp=drivesdk">
 <img src="https://img.shields.io/badge/📁_Tonton_Di_Drive-4285F4?style=for-the-badge&logo=google-drive&logoColor=white" alt="Google Drive">
 </a>
 </td>
@@ -54,35 +46,15 @@ Proyek ini bertujuan untuk memantau dan mengelola sampah laut menggunakan teknol
 
 ---
 
-## 👥 Tim Pengembang
+## Tim Pengembang
 
 <div align="center">
 
 | Role | Anggota |
 |------|---------|
-| 👨‍ Developer | **Kelompok 8** |
-| 📅 Tahun | **2026** |
+| Developer | **Kelompok 8** |
+| Tahun | **2026** |
 
 </div>
 
 ---
-
-##  Fitur Utama
-
--  **Monitoring Real-time** - Pemantauan kondisi laut secara langsung
-- 📈 **Analisis Data** - Visualisasi data sampah laut yang komprehensif
-- 🗺️ **Pemetaan Lokasi** - Identifikasi area dengan tingkat sampah tinggi
-- 📱 **Aksesibilitas** - Mudah diakses melalui berbagai platform
-
----
-
-## 🛠️ Teknologi yang Digunakan
-
-<!-- Anda bisa menambahkan teknologi yang digunakan -->
-- 🌐 Web-based Application
-- 📊 Data Visualization
-- ☁️ Cloud Storage
-
----
-
-## 📁 Struktur Folder
