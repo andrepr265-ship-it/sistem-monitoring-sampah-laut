@@ -35,7 +35,7 @@ Folder ini berisi presentasi dari proyek **Sistem Monitoring Sampah Laut** yang 
 
 ---
 
-## Tim Pengembang
+## Anggota Kelompok 8
 
 <div align="center">
 
