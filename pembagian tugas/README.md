@@ -5,8 +5,8 @@
 | No | Nama | NIM |
 |----|------|-----|
 | 1 | Andre Zulyan Pratama | 2501020115 |
-| 2 | Putra Ali Syabbana | 2501020088 |
-| 3 | Rizky Akbar Hidayatulah | 2501020113 |
+| 2 | Putra Ali Syahbana | 2501020088 |
+| 3 | Rizky Akbar Hidayatullah | 2501020113 |
 | 4 | M. Riquelma Zidan | 2501020110 |
 
 ---
@@ -24,7 +24,7 @@
 
 ---
 
-### 2. Putra Ali Syabbana (2501020088)
+### 2. Putra Ali Syahbana (2501020088)
 
 | Progres | Tugas dan Tanggung Jawab |
 |---------|-------------------------|
@@ -35,7 +35,7 @@
 
 ---
 
-### 3. Rizky Akbar Hidayatulah (2501020113)
+### 3. Rizky Akbar Hidayatullah (2501020113)
 
 | Progres | Tugas dan Tanggung Jawab |
 |---------|-------------------------|
