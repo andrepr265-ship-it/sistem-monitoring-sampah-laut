@@ -2,10 +2,6 @@
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/Status-Selesai-success)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Team](https://img.shields.io/badge/Team-Kelompok%208-orange)
 
 **Presentasi Proyek Sistem Monitoring Sampah Laut**
 
