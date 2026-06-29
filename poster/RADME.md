@@ -4,13 +4,13 @@
 Poster ini merupakan representasi visual dari proyek **Sistem Monitoring Sampah Laut** yang bertujuan untuk memantau dan mengelola sampah di laut menggunakan teknologi modern.
 
 ## Poster
+<img width="941" height="1672" alt="poster_sistem_monitoring_sampah_laut" src="https://github.com/user-attachments/assets/8507ad91-b191-44ee-9a4f-9e9ea7e03b96" />
 
 
 ## Tujuan Poster
 - Menjelaskan konsep sistem monitoring sampah laut
 - Menampilkan arsitektur dan cara kerja sistem
 - Menyampaikan manfaat dan fitur utama aplikasi
-- Sebagai media presentasi dan publikasi proyek
 
 ## Kelompok 8
 | No | Nama | NIM |
